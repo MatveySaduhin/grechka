@@ -9,7 +9,6 @@ require 'auto-commands'
 
 local ok, _ = pcall(require, 'colorscheme')
 if not ok then
-  vim.notify('colorscheme.lua not found — skipping', vim.log.levels.WARN)
   vim.cmd.colorscheme 'default'
 end
 
