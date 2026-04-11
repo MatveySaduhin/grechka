@@ -12,17 +12,11 @@ vim.opt.mouse = 'a'
 -- Colors
 vim.opt.termguicolors = true
 
--- Don't show the mode, since it's already in the status line
+-- Don't show the mode
 vim.opt.showmode = false
 
 -- Sync clipboard between OS and Neovim.
---  Schedule the setting after `UiEnter` because it can increase startup-time.
---  Remove this option if you want your OS clipboard to remain independent.
---  See `:help 'clipboard'`
--- vim.schedule(function()
---   vim.opt.clipboard = 'unnamedplus'
--- end)
-vim.opt.clipboard = 'unnamedplus' -- Sync with system clipboard
+vim.opt.clipboard = 'unnamedplus'
 
 -- Enable break indent
 vim.opt.breakindent = true
@@ -48,8 +42,6 @@ vim.opt.splitright = true
 vim.opt.splitbelow = true
 
 -- Sets how neovim will display certain whitespace characters in the editor.
---  See `:help 'list'`
---  and `:help 'listchars'`
 vim.opt.list = true
 vim.opt.listchars = { tab = '  ', trail = '·', nbsp = '␣' }
 
@@ -67,7 +59,5 @@ vim.g.netrw_banner = 2 -- Hide the help banner at the top
 vim.g.netrw_liststyle = 3 -- Use tree view by default
 vim.g.netrw_winsize = 25 -- Set the width of the vertical split
 
--- if performing an operation that would fail due to unsaved changes in the buffer (like `:q`),
--- instead raise a dialog asking if you wish to save the current file(s)
--- See `:help 'confirm'`
+-- Suggest saving the changed file on :q event
 vim.opt.confirm = true
