@@ -7,8 +7,7 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
--- window
-vim.keymap.set('n', '<leader>bq', '<cmd>qa<cr>', { desc = 'Quit all windows' })
+-- netrw
 vim.keymap.set('n', '\\', function()
     if vim.bo.filetype == 'netrw' then
         vim.cmd('b #')
@@ -43,12 +42,18 @@ vim.keymap.set('n', '<space>bt', function()
   vim.api.nvim_win_set_height(0, 5)
 
   new_term_job_id = vim.bo.channel
-end, { desc = 'Open small terminal below' })
+end, { desc = 'Open terminal terminal below' })
 
-vim.keymap.set('n', '<space>bo', function()
+vim.keymap.set('n', '<space>bg', function()
   vim.fn.chansend(new_term_job_id, { 'go run main.go\r\n' })
-end, { desc = 'Run . go project in terminal' })
+end, { desc = 'Run go project in the tiny terminal' })
+
+vim.keymap.set('n', '<space>bc', function()
+  vim.fn.chansend(new_term_job_id, { 'gcc main.go -o main\r\n' })
+end, { desc = 'Run C project in the tiny terminal' })
 
 vim.keymap.set('n', '<space>br', function()
   vim.fn.chansend(new_term_job_id, { 'cargo run .\r\n' })
-end, { desc = 'Run / rust project in terminal' })
+end, { desc = 'Run cargo project in tiny terminal' })
+
+vim.keymap.set('n', '<leader>b', '', { desc = 'Tiny terminal window' })
