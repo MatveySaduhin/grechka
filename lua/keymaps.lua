@@ -9,7 +9,13 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 
 -- window
 vim.keymap.set('n', '<leader>bq', '<cmd>qa<cr>', { desc = 'Quit all windows' })
-vim.keymap.set('n', '\\', '<cmd>Explore<cr>', { desc = 'Netrw' })
+vim.keymap.set('n', '\\', function()
+    if vim.bo.filetype == 'netrw' then
+        vim.cmd('b #')
+    else
+        vim.cmd('Explore')
+    end
+end, { desc = 'Toggle netrw' })
 
 -- See `:help wincmd` for a list of all window commands
 vim.keymap.set('n', '<A-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
