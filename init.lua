@@ -9,6 +9,8 @@ require 'auto-commands'
 
 require 'plugins'
 
+require 'plugins-config'.setup()
+
 local ok, _ = pcall(require, 'colorscheme')
 if not ok then
   vim.cmd.colorscheme 'tokyonight-moon'
