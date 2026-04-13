@@ -17,6 +17,10 @@ local configs = {
     ['mini.diff'] = function()
         require('mini.diff').setup()
     end,
+
+    ['mini.completion'] = function()
+        require('mini.completion').setup()
+    end,
 }
 
 return {
