@@ -4,6 +4,7 @@ return {
         "https://github.com/folke/which-key.nvim",
         "https://github.com/echasnovski/mini.diff",
         "https://github.com/echasnovski/mini.completion",
+        "https://github.com/neovim/nvim-lspconfig",
         {
             src = "https://github.com/nvim-treesitter/nvim-treesitter",
             version = "main",
