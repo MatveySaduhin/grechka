@@ -21,6 +21,12 @@ local configs = {
     ['mini.completion'] = function()
         require('mini.completion').setup()
     end,
+
+    ['lspconfig'] = function()
+        pcall(vim.lsp.enable,'rust_analyzer')
+        pcall(vim.lsp.enable,'lua_ls')
+        pcall(vim.lsp.enable,'gopls')
+    end,
 }
 
 return {
