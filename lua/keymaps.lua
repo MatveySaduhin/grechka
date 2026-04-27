@@ -24,6 +24,12 @@ end, { desc = "Quick file navigation" })
 -- Buffer picker with native completion
 vim.keymap.set('n', '<leader>o', ':buffer ')
 
+-- Jump to previous buffer
+-- BUG: doesn't work after netrw use
+vim.keymap.set('n', '<leader><leader>', '<C-^>', {
+  desc = 'Switch to last buffer',
+})
+
 -- See `:help wincmd` for a list of all window commands
 vim.keymap.set('n', '<A-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
 vim.keymap.set('n', '<A-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
