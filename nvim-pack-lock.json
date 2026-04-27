@@ -8,6 +8,10 @@
       "rev": "ab11575a6c147ecfba894d676d0c93e855021d34",
       "src": "https://github.com/echasnovski/mini.diff"
     },
+    "mini.files": {
+      "rev": "3e247eb12ca8c05622ceb8745f9004f761b22ef8",
+      "src": "https://github.com/echasnovski/mini.files"
+    },
     "mini.move": {
       "rev": "74d140143b1bb905c3d0aebcfc2f216fd237080e",
       "src": "https://github.com/echasnovski/mini.move"

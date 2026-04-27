@@ -16,6 +16,11 @@ vim.keymap.set('n', '\\', function()
     end
 end, { desc = 'Toggle netrw' })
 
+-- mini.files
+vim.keymap.set("n", "<leader>e", function()
+  require("mini.files").open(vim.api.nvim_buf_get_name(0))
+end, { desc = "Quick file navigation" })
+
 -- See `:help wincmd` for a list of all window commands
 vim.keymap.set('n', '<A-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
 vim.keymap.set('n', '<A-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })

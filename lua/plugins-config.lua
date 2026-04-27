@@ -14,6 +14,14 @@ local configs = {
         })
     end,
 
+    ['mini.move'] = function()
+        require('mini.move').setup({
+           options = {
+              use_as_default_explorer = true,
+           },
+        })
+    end,
+
     ['mini.diff'] = function()
         require('mini.diff').setup()
     end,
