@@ -55,7 +55,7 @@ vim.opt.cursorline = true
 vim.opt.scrolloff = 10
 
 -- Netrw config
-vim.g.netrw_banner = 2 -- Hide the help banner at the top
+vim.g.netrw_banner = 0 -- Hide the help banner at the top
 vim.g.netrw_liststyle = 3 -- Use tree view by default
 vim.g.netrw_winsize = 25 -- Set the width of the vertical split
 
