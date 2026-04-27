@@ -1,6 +1,8 @@
 return {
     vim.pack.add({
         "https://github.com/folke/tokyonight.nvim",
+        "https://github.com/blazkowolf/gruber-darker.nvim",
+
         "https://github.com/folke/which-key.nvim",
         "https://github.com/echasnovski/mini.diff",
         "https://github.com/echasnovski/mini.completion",
