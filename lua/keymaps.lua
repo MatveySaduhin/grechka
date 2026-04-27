@@ -63,7 +63,7 @@ vim.keymap.set('n', '<space>bg', function()
 end, { desc = 'Run go project in the tiny terminal' })
 
 vim.keymap.set('n', '<space>bc', function()
-  vim.fn.chansend(new_term_job_id, { 'gcc main.go -o main\r\n' })
+  vim.fn.chansend(new_term_job_id, { 'cc main.c -o main && ./main\r\n' })
 end, { desc = 'Run C project in the tiny terminal' })
 
 vim.keymap.set('n', '<space>br', function()
