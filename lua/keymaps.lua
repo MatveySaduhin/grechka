@@ -53,7 +53,7 @@ vim.keymap.set('n', '<space>bt', function()
   vim.cmd.vnew()
   vim.cmd.term()
   vim.cmd.wincmd 'J'
-  vim.api.nvim_win_set_height(0, 5)
+  vim.api.nvim_win_set_height(0, 10)
 
   new_term_job_id = vim.bo.channel
 end, { desc = 'Open terminal terminal below' })
