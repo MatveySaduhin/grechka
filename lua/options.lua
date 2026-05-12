@@ -61,3 +61,15 @@ vim.g.netrw_winsize = 25 -- Set the width of the vertical split
 
 -- Suggest saving the changed file on :q event
 vim.opt.confirm = true
+
+-- Status line
+vim.opt.laststatus = 3
+
+vim.opt.statusline = table.concat({
+  " %f",       -- file path
+  "%m%r",      -- modified / readonly
+  "%=",        -- push the rest to the right
+  " %y",       -- filetype
+  " %l:%c",    -- line:column
+  " %p%% ",    -- percent through file
+})

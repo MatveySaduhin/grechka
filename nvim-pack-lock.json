@@ -24,6 +24,10 @@
       "rev": "c67822c53e8e282fe863343e88aa0a8ca3534059",
       "src": "https://github.com/echasnovski/mini.nvim"
     },
+    "mini.statusline": {
+      "rev": "e9e5c147385e5e0310ab79162dd08d0465e96d83",
+      "src": "https://github.com/echasnovski/mini.statusline"
+    },
     "nvim-lspconfig": {
       "rev": "8a9378a822719346a0288fa004dab302ca3c0a8f",
       "src": "https://github.com/neovim/nvim-lspconfig"
